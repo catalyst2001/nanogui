@@ -205,6 +205,7 @@ public:
 
         window = new Window(this, "Basic widgets");
         window->setPosition(Vector2i(200, 15));
+        window->setSize(Vector2i(100, 200));
         window->setLayout(new GroupLayout());
 
         new Label(window, "Message dialog", "sans-bold");
@@ -230,7 +231,7 @@ public:
         vector<pair<int, string>>
             icons = loadImageDirectory(mNVGContext, "icons");
         #if defined(_WIN32)
-            string resourcesFolderPath("../resources/");
+            string resourcesFolderPath("");
         #else
             string resourcesFolderPath("./");
         #endif
